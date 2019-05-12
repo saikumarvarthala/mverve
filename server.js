@@ -11,7 +11,6 @@ const config = require('./config/development');
 //*****module routes******* 
 const GenreModule = require('./modules/genre/genre.module');
 const MovieModule = require('./modules/movie/movie.module');
-// const AccountModule = require('./modules/account/account.module');
 
 //*****server setup****
 (async () => {
@@ -84,13 +83,5 @@ const MovieModule = require('./modules/movie/movie.module');
             throw err;
         }
         console.log(`http://${server.info.host}:${server.info.port}/documentation#/`);
-        // server.auth.strategy('jwt','jwt',{
-        //    key: config.secret,
-        //    verifyOptions:{
-        //        algorithm: ['HS256']
-        //    },
-        // //    validateFunc: JwtService.validate
-        // });
-        // server.auth.default('jwt');
     });
 })();
